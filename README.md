@@ -29,9 +29,25 @@ import ColorChecker from './color-checker';
   const failedComparisons = myColorChecker.comparisons.filter(c => !c.isReadable).map((comparison, index) =>
     <li key={index}>{comparison.color1} and { comparison.color2 } are not readable!</li>
   );
-  
+
   if (myColorChecker.isValid) { /*do something*/ };
   ```
+  # Display Custom Errors in JSX
+  ```jsx
+{ myColorChecker.isValid && <span className="success">Yes</span> }
+{
+    failedComparisons.length > 0 &&
+    <div>
+        <div className="error">Found Comparison errors!</div>
+        <ul>
+        {
+            failedComparisons
+        }            
+        </ul>
+
+    </div>
+}
+```
 
   # Use the Component in JSX
   ```html
