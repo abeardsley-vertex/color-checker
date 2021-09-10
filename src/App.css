@@ -20,12 +20,11 @@ h2 {
   margin-bottom: 15px;
 }
 
-.done {
-  color: rgba(0, 0, 0, 0.3);
-  text-decoration: line-through;
-}
-
-input {
+.colorbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #777;
   margin-right: 5px;
 }
 

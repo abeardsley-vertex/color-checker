@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
-import ColorChecker from './components/color-checker';
+import ColorCheckerComponent from './components/color-checker';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div id="app" className="App">
-      <ColorChecker colors={colors} comparisons={comparisons} />
+      <ColorCheckerComponent colors={colors} comparisons={comparisons} />
     </div>
   );
 }

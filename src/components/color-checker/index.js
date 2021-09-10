@@ -1,17 +1,22 @@
 import React from "react";
+import ColorChecker from "../../color-checker/color-checker";
 import tinycolor from "tinycolor2";
 
-export default class ColorChecker extends React.Component {
+export default class ColorCheckerComponent extends React.Component {
 
-    /*
+    
     constructor(props) {
       super(props);
+
+      this.state = {
+          isValid: false
+      };
     }
-    */
+    
 
     render() {
 
-        let isValid = true;
+        //let isValid = true;
 
         this.props.comparisons.forEach(comparison => {
             
@@ -31,7 +36,7 @@ export default class ColorChecker extends React.Component {
             let color2 = this.props.colors.find(c => c.name === comparison.color2).value;
             comparison.isReadable =  tinycolor.isReadable(color1, color2, {});
 
-            if (!comparison.isReadable) isValid = false;
+            if (!comparison.isReadable) this.state.isValid = false;
         });
 
       return (
@@ -41,7 +46,7 @@ export default class ColorChecker extends React.Component {
           {this.props.colors.map((item, index) => (
             <li key={ index }>
               <label>
-                <span style={ { display: 'inline-block', width: '20px', height: '20px', border: 'solid 1px #777', backgroundColor: item.value } }></span>
+                <span className="colorbox" style={ { backgroundColor: item.value } }></span>
                 <span>{item.name}:</span>
                 <span>{item.value }</span>
               </label>
@@ -63,8 +68,8 @@ export default class ColorChecker extends React.Component {
           </ol>
 
           <h2>All Are Valid</h2>
-          { isValid && <span className="success">Yes</span> }
-          { !isValid && <span className="error">No</span> }
+          { this.state.isValid && <span className="success">Yes</span> }
+          { !this.state.isValid && <span className="error">No</span> }
         </div>
       )
     }
