@@ -24,8 +24,12 @@ import ColorChecker from './color-checker';
   ```js
   let myColorChecker = new ColorChecker(colors, comparisons);
   myColorChecker.check();
-  ...
-  ...
+
+  //get a list of failed comparisons
+  const failedComparisons = myColorChecker.comparisons.filter(c => !c.isReadable).map((comparison, index) =>
+    <li key={index}>{comparison.color1} and { comparison.color2 } are not readable!</li>
+  );
+  
   if (myColorChecker.isValid) { /*do something*/ };
   ```
 
