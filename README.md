@@ -1,6 +1,7 @@
-# Import the ColorChecker
+# Import the ColorCheckerComponent or the ColorChecker class
 ```js
-import ColorChecker from './components/color-checker';
+import ColorCheckerComponent from './components/color-checker';
+import ColorChecker from './color-checker';
 ```
 
 # Create Arrays to store colors and comparisons
@@ -17,6 +18,15 @@ import ColorChecker from './components/color-checker';
     { color1: 'background', color2: 'button-text' },
     { color1: 'background', color2: 'button-background' }
   ];
+  ```
+
+# Instantiate in code
+  ```js
+  let myColorChecker = new ColorChecker(colors, comparisons);
+  myColorChecker.check();
+  ...
+  ...
+  if (myColorChecker.isValid) { /*do something*/ };
   ```
 
   # Place the component in JSX
