@@ -3,17 +3,19 @@ import tinycolor from "tinycolor2";
 
 export default class ColorChecker extends React.Component {
 
+    /*
     constructor(props) {
       super(props);
     }
-    
+    */
+   
     render() {
 
         let isValid = true;
 
         this.props.comparisons.forEach(comparison => {
-            let color1 = this.props.colors.find(c => c.name == comparison.color1).value;
-            let color2 = this.props.colors.find(c => c.name == comparison.color2).value;
+            let color1 = this.props.colors.find(c => c.name === comparison.color1).value;
+            let color2 = this.props.colors.find(c => c.name === comparison.color2).value;
             comparison.isReadable =  tinycolor.isReadable(color1, color2, {});
 
             if (!comparison.isReadable) isValid = false;
