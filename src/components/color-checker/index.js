@@ -39,8 +39,8 @@ export default class ColorChecker extends React.Component {
           {this.props.comparisons.map((item, index) => (
             <li key={ index }>
               <label>
-                <span>{item.color1}: </span>
-                <span>{item.color2} </span>
+                <span>{item.color1} and </span>
+                <span>{item.color2}: </span>
                 <span className={ item.isReadable ? "success" : "error" }>{ item.isReadable.toString() }</span>
               </label>
             </li>
