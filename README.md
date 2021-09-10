@@ -13,9 +13,9 @@ import ColorChecker from './components/color-checker';
   ];
 
   let comparisons = [
-    { color1: 'background', color2: 'text', isValid: false},
-    { color1: 'background', color2: 'button-text', isValid: false},
-    { color1: 'background', color2: 'button-background', isValid: false}
+    { color1: 'background', color2: 'text' },
+    { color1: 'background', color2: 'button-text' },
+    { color1: 'background', color2: 'button-background' }
   ];
   ```
 
