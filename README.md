@@ -1,6 +1,6 @@
 # Import the ColorChecker
 ```js
-import tinycolor from "tinycolor2";
+import ColorChecker from './components/color-checker';
 ```
 
 # Create Arrays to store colors and comparisons
