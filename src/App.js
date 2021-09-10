@@ -1,11 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import TodoApp from './components/color-checker';
+import ColorChecker from './components/color-checker';
 
 function App() {
+
+  let colors = [
+    { name: 'background', value: '#fff' },
+    { name: 'text', value: '#000' },
+    { name: 'button-text', value: '#040' },
+    { name: 'button-background', value: '#2c7' }
+  ];
+
+  let comparisons = [
+    { color1: 'background', color2: 'text', isValid: false},
+    { color1: 'background', color2: 'button-text', isValid: false},
+    { color1: 'background', color2: 'button-background', isValid: false}
+  ];
+
   return (
     <div id="app" className="App">
-      <TodoApp></TodoApp>
+      <ColorChecker colors={colors} comparisons={comparisons} />
     </div>
   );
 }
