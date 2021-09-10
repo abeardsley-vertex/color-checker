@@ -8,12 +8,25 @@ export default class ColorChecker extends React.Component {
       super(props);
     }
     */
-   
+
     render() {
 
         let isValid = true;
 
         this.props.comparisons.forEach(comparison => {
+            
+            comparison.isReadable = false;
+
+            if (this.props.colors.filter(color => color.name === comparison.color1).length == 0) {
+                console.error(comparison.color1 + ' not found in colors.');
+                return;
+            }
+
+            if (this.props.colors.filter(color => color.name === comparison.color2).length == 0) {
+                console.error(comparison.color2 + ' not found in colors.');
+                return;
+            }
+
             let color1 = this.props.colors.find(c => c.name === comparison.color1).value;
             let color2 = this.props.colors.find(c => c.name === comparison.color2).value;
             comparison.isReadable =  tinycolor.isReadable(color1, color2, {});
