@@ -34,5 +34,5 @@ import ColorChecker from './color-checker';
   <ColorChecker colors={colors} comparisons={comparisons} />
   ```
 
-  # Result
+  # Component Display
   <img src="public/screenshot.png" />
