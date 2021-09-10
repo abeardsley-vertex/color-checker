@@ -20,7 +20,7 @@ import ColorChecker from './color-checker';
   ];
   ```
 
-# Instantiate in code
+# Use the Class in Code
   ```js
   let myColorChecker = new ColorChecker(colors, comparisons);
   myColorChecker.check();
@@ -29,7 +29,7 @@ import ColorChecker from './color-checker';
   if (myColorChecker.isValid) { /*do something*/ };
   ```
 
-  # Place the component in JSX
+  # Use the Component in JSX
   ```html
   <ColorChecker colors={colors} comparisons={comparisons} />
   ```
