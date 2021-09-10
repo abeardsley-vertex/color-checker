@@ -8,7 +8,7 @@ function App() {
     { name: 'background', value: '#fff' },
     { name: 'text', value: '#000' },
     { name: 'button-text', value: '#040' },
-    { name: 'button-background', value: 'darkblue' }
+    { name: 'button-background', value: 'lightblue' }
   ];
 
   let comparisons = [

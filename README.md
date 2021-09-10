@@ -9,7 +9,7 @@ import tinycolor from "tinycolor2";
     { name: 'background', value: '#fff' },
     { name: 'text', value: '#000' },
     { name: 'button-text', value: '#040' },
-    { name: 'button-background', value: 'darkblue' }
+    { name: 'button-background', value: 'lightgreen' }
   ];
 
   let comparisons = [
@@ -23,3 +23,6 @@ import tinycolor from "tinycolor2";
   ```html
   <ColorChecker colors={colors} comparisons={comparisons} />
   ```
+
+  # Result
+  <img src="public/screenshot.png" />
